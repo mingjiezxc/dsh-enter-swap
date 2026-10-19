@@ -1,0 +1,52 @@
+{
+  "name": "@major.chen/dsh-enter-swap",
+  "version": "1.0.0",
+  "type": "module",
+  "license": "MIT",
+  "description": "Exchange the DSH composer's Enter and Shift+Enter: Enter inserts a newline, Shift+Enter sends.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "composer",
+    "keyboard",
+    "plugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mingjiezxc/dsh-enter-swap.git"
+  },
+  "homepage": "https://github.com/mingjiezxc/dsh-enter-swap#readme",
+  "bugs": {
+    "url": "https://github.com/mingjiezxc/dsh-enter-swap/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  }
+}

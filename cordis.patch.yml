@@ -1,0 +1,5 @@
+- insert:
+    # 行 id 保持 composer-enter-swap：它标识「交换 composer 的 Enter」这一行，
+    # 与包名解耦；改名会重置已在宿主里存的启用状态。
+    - id: composer-enter-swap
+      name: '@major.chen/dsh-enter-swap'

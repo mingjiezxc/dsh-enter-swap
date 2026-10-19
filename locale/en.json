@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Swap Enter and Shift+Enter",
+    "description": "Enter inserts a newline in the composer; Shift+Enter sends the message."
+  }
+}
