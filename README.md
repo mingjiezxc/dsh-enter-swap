@@ -17,7 +17,7 @@ DSH Web GUI 的输入框快捷键互换插件：**Enter 换行，Shift+Enter 发
 dsh plugin --profile <profile> add @major.chen/dsh-enter-swap
 
 # 或本地 link
-dsh plugin --profile <profile> add link:/root/workspace/dsh-enter-swap
+dsh plugin --profile <profile> add link:/path/to/dsh-enter-swap
 ```
 
 安装后**刷新页面**（新增 Client 插件不走免刷新 HMR）。
@@ -36,7 +36,7 @@ dsh plugin --profile <profile> add link:/root/workspace/dsh-enter-swap
 ## 发布
 
 ```bash
-npm publish --registry=https://registry.npmjs.org --cache /root/workspace/.npm-cache
+npm publish --registry=https://registry.npmjs.org
 ```
 
-（`publishConfig.access=public` 已声明；本机 `/root/.npm` 只读，必须换 cache 目录。）
+（`publishConfig.access=public` 已声明。若本机 npm cache 目录不可写，再补 `--cache <可写目录>`。）
